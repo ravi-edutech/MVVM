@@ -64,6 +64,10 @@ class UsersView: UIView {
         print("display name ")
     }
     
+    func displayRole(){
+        print("display role")
+    }
+    
 }
 extension UsersView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
