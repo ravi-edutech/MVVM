@@ -60,6 +60,10 @@ class UsersView: UIView {
         super.layoutSubviews()
     }
     
+    func displayName(){
+        print("display name ")
+    }
+    
 }
 extension UsersView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
