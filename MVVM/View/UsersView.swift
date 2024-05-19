@@ -60,6 +60,10 @@ class UsersView: UIView {
         super.layoutSubviews()
     }
     
+    func displayRole(){
+        print("display role")
+    }
+    
 }
 extension UsersView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
