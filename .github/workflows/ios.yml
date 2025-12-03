@@ -31,7 +31,7 @@ jobs:
       - name: Run Unit Tests
         run: |
           xcodebuild test \
-            -project MVVM.xcodeproj \
+            -project MVVMTests.xcodeproj \
             -scheme MVVM \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 16 Pro'

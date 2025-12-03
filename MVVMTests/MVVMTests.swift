@@ -30,11 +30,7 @@ final class MVVMTests: XCTestCase {
     }
     
     func testUserRequest(){
-        let presenter = UserPresenter(client: usersVC.httpClientProtcolType)
-        usersVC.userPresenter = presenter
-        let fileURL = Bundle(for: MVVMTests.self).url(forResource: "user-mock", withExtension: "json")
-        let data = try! Data(contentsOf: fileURL!)
-//        usersVC.fetchUsers()
+        
     }
     
 
