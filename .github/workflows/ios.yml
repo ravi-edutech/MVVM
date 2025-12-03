@@ -1,0 +1,43 @@
+name: iOS CI
+
+on:
+  push:
+    branches:
+    -main
+  pull_request:
+    branches:
+      -main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Install dependencies (CocoaPods)  # remove if not using pods
+        run: |
+          cd ios
+          pod install --repo-update
+
+      - name: Build the project
+        run: |
+          xcodebuild \
+            -workspace ios/YourApp.xcworkspace \
+            -scheme YourApp \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            clean build
+
+      - name: Run Unit Tests
+        run: |
+          xcodebuild test \
+            -workspace ios/YourApp.xcworkspace \
+            -scheme YourApp \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15'
+
