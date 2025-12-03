@@ -23,7 +23,7 @@ jobs:
         run: |
           xcodebuild \
             -project MVVM.xcodeproj \
-            -scheme MVC \
+            -scheme MVVM \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15' \
             clean build
@@ -32,7 +32,7 @@ jobs:
         run: |
           xcodebuild test \
             -project MVVM.xcodeproj \
-            -scheme MVC \
+            -scheme MVVM \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 15'
 
