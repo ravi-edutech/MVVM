@@ -25,7 +25,7 @@ jobs:
             -project MVVM.xcodeproj \
             -scheme MVVM \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
             clean build
 
       - name: Run Unit Tests
@@ -34,5 +34,5 @@ jobs:
             -project MVVM.xcodeproj \
             -scheme MVVM \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 15'
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro'
 
