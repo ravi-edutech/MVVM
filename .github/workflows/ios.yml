@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-the-app-ravi:
+  build:
     runs-on: macos-latest
 
     steps:
